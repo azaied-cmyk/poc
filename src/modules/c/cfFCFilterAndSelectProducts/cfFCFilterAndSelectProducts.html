@@ -1,0 +1,131 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative ">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <c-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </c-toast>
+</div>
+            <div if:false={cardLoaded} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: white; z-index: 99;">
+  <div>
+   <c-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></c-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                      <c-flex-card-state   data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-p-around_x-small slds-m-bottom_x-small" style="">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small  slds-size_12-of-12  " data-rindex={rindex} style="background-color:#2098DD;      
+      min-height:250px;  color:#0883AD; background:linear-gradient(98deg, #E2CCFF 0%, #3818FC 100%)" >
+    <c-block data-style-id="state0element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12  " data-rindex={rindex} style="" >
+    <c-block data-style-id="state0element0block_element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0block_element0" class="slds-col   slds-size_7-of-12  " data-rindex={rindex} style="      
+        color:#ffffff; width: 541px;
+height: 222px;
+
+font-family: 'BellSlim';
+font-style: normal;
+font-weight: 900;
+font-size: 57px;
+line-height: 61px;
+display: flex;
+align-items: center;
+
+/* Secondary / White */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;" ><c-output-field data-style-id="state0element0block_element0block_element0_child"   card={card}  record={record}  merge-field="%3Cdiv%3EThe%20New%20Technology%3Cbr%20/%3Eis%20here%3C/div%3E"  theme="slds"  ></c-output-field>
+      </div><div data-style-id="state0element0block_element0block_element1" class="slds-col  slds-text-align_right  slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-small-size_4-of-12 slds-size_4-of-12  " data-rindex={rindex} style="      
+         width: 352px;
+height: 186px;
+
+background: url(2c58fb7d-fc21-4ba5-a586-d90404bdde41_ea117587-3937-41d3-b869-ffcbf04deabf_productImage.png);
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;" ><c-flex-img data-style-id="state0element0block_element0block_element1_child"   card={card}  record={record}  size="large"  extraclass="slds-align_absolute-center"  state-img='\{"imgsrc":"/sfc/servlet.shepherd/version/download/0688K000000QpJSQA0","alternativeText":"Image description","document":{"label":"Huawei_Mate20_Pro_Twilight_lrg1_en (Version:1)","value":"/sfc/servlet.shepherd/version/download/0688K000000QpJSQA0","title":"Huawei_Mate20_Pro_Twilight_lrg1_en","Id":"0688K000000QpJSQA0","attachmentType":"ContentVersion"}}'  theme="slds"  ></c-flex-img>
+      </div>
+        </div></c-block>
+    </div>
+        </div></c-block>
+    </div>
+        </div>
+      </c-flex-card-state>
+                </template>
+                <template if:false={hasRecords}>
+                      <c-flex-card-state   data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-p-around_x-small slds-m-bottom_x-small" style="">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small  slds-size_12-of-12  " data-rindex={rindex} style="background-color:#2098DD;      
+      min-height:250px;  color:#0883AD; background:linear-gradient(98deg, #E2CCFF 0%, #3818FC 100%)" >
+    <c-block data-style-id="state0element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12  " data-rindex={rindex} style="" >
+    <c-block data-style-id="state0element0block_element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0block_element0" class="slds-col   slds-size_7-of-12  " data-rindex={rindex} style="      
+        color:#ffffff; width: 541px;
+height: 222px;
+
+font-family: 'BellSlim';
+font-style: normal;
+font-weight: 900;
+font-size: 57px;
+line-height: 61px;
+display: flex;
+align-items: center;
+
+/* Secondary / White */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;" ><c-output-field data-style-id="state0element0block_element0block_element0_child"   card={card}  record={record}  merge-field="%3Cdiv%3EThe%20New%20Technology%3Cbr%20/%3Eis%20here%3C/div%3E"  theme="slds"  ></c-output-field>
+      </div><div data-style-id="state0element0block_element0block_element1" class="slds-col  slds-text-align_right  slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-small-size_4-of-12 slds-size_4-of-12  " data-rindex={rindex} style="      
+         width: 352px;
+height: 186px;
+
+background: url(2c58fb7d-fc21-4ba5-a586-d90404bdde41_ea117587-3937-41d3-b869-ffcbf04deabf_productImage.png);
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;" ><c-flex-img data-style-id="state0element0block_element0block_element1_child"   card={card}  record={record}  size="large"  extraclass="slds-align_absolute-center"  state-img='\{"imgsrc":"/sfc/servlet.shepherd/version/download/0688K000000QpJSQA0","alternativeText":"Image description","document":{"label":"Huawei_Mate20_Pro_Twilight_lrg1_en (Version:1)","value":"/sfc/servlet.shepherd/version/download/0688K000000QpJSQA0","title":"Huawei_Mate20_Pro_Twilight_lrg1_en","Id":"0688K000000QpJSQA0","attachmentType":"ContentVersion"}}'  theme="slds"  ></c-flex-img>
+      </div>
+        </div></c-block>
+    </div>
+        </div></c-block>
+    </div>
+        </div>
+      </c-flex-card-state>
+                </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <c-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </c-action>
+  
+            <c-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </c-action>
+            </div>
+          </template>
