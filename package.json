@@ -57,6 +57,6 @@
     "watch": "lwc-services watch -w scripts/webpack.config.js",
     "customlabels": "node scripts/getAllCustomLabels.js",
     "prepareresources": "node ./scripts/updateCssResources.js",
-    "heroku-postbuild": "npm run watch"
+    "heroku-postbuild": "npm run build"
   }
 }
