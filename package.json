@@ -5,23 +5,24 @@
   "author": "Vlocity, Inc.",
   "license": "SEE LICENSE IN LICENSE.txt",
   "dependencies": {
+    "@omnistudio/cards": "234.4.0",
+    "@omnistudio/components": "234.4.0",
+    "@omnistudio/oui": "234.4.0",
+    "@omnistudio/platform": "234.4.0",
+    "@omnistudio/resources": "234.4.0",
+    "@omnistudio/sdk": "234.4.0",
     "@salesforce-ux/design-system": "2.14.3",
     "aem-clientlib-generator": "^1.7.5",
     "compression": "1.7.4",
+    "cookie-parser": "^1.4.5",
     "dayjs": "^1.9.6",
     "dompurify": "^2.3.0",
     "dotenv-webpack": "7.0.2",
     "express": "4.17.1",
     "helmet": "^4.4.1",
     "jsonwebtoken": "^8.5.1",
-    "cookie-parser": "^1.4.5",
     "request-promise": "^ 4.2.6",
-    "@omnistudio/sdk": "234.4.0",
-    "@omnistudio/resources": "234.4.0",
-    "@omnistudio/platform": "234.4.0",
-    "@omnistudio/components": "234.4.0",
-    "@omnistudio/cards": "234.4.0",
-    "@omnistudio/oui": "234.4.0"
+    "serve": "^14.0.1"
   },
   "devDependencies": {
     "eslint": "7.23.0",
@@ -56,6 +57,6 @@
     "watch": "lwc-services watch -w scripts/webpack.config.js",
     "customlabels": "node scripts/getAllCustomLabels.js",
     "prepareresources": "node ./scripts/updateCssResources.js",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "lwc-services build -m production -w scripts/webpack.config.js"
   }
 }
